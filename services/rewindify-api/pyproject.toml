@@ -1,7 +1,15 @@
 [project]
 name = "rewindify-api"
 version = "0.1.0"
-description = "Add your description here"
+description = "a REST API for rewindify."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.10",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
