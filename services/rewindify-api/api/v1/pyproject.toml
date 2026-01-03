@@ -16,4 +16,4 @@ dev = [
 select = ["ALL"]
 
 [tool.ty.environment]
-root = ["./api"]
+root = ["./v1"]
