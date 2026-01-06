@@ -1,0 +1,10 @@
+Basic Premise: Spotify listening history collection + visualization. 
+
+Goals: Make something people want to use, gain personal experience, learn best practices
+
+MVP: something that lets you drag + drop your listening history in and click different options (cumulative listens over time, cumulative artist listens, top k songs, etc). Has appeal by abstracting away a lot of the window function/group by stuff you would have to write manually. can do total minutes, by year, slice and dice data a million different ways. Free to use, no account req'd. Make graphs/charts consumable, shareable
+
+v1: we store your listening history for on-demand visualizations. you can (within 30 minutes of recency) see how your listening habits have changes since joining the platform. you can also import your data to get a full picture. we will need auth for this. Also setting up Stripe.
+
+v2: running statistical tests on your listening trends. comparing aggregated data of other users on the platform to your habits. LLM-generated summaries based on statistical findings.
+
