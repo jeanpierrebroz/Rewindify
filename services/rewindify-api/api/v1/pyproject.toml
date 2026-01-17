@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "a REST API for rewindify."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "clickhouse-connect>=0.10.0",
+]
 
 [dependency-groups]
 dev = [
