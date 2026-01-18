@@ -5,8 +5,13 @@ description = "a REST API for rewindify."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "clickhouse-connect>=0.10.0",
+    "shared-models",
+    "shared-db",
 ]
+
+[tool.uv.sources]
+shared-models = { workspace = true }
+shared-db = { workspace = true }
 
 [dependency-groups]
 dev = [
@@ -14,8 +19,12 @@ dev = [
     "ty>=0.0.8",
 ]
 
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
+
 [tool.ruff.lint]
 select = ["ALL"]
 
 [tool.ty.environment]
-root = ["./v1"]
+root = ["./src/rewindify_api"]
