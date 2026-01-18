@@ -1,10 +1,22 @@
 [project]
 name = "services"
 version = "0.1.0"
-description = "Add your description here"
+description = "All backend functionality for Rewindify!"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+
+dependencies = [
+    "pydantic>=2.12.5",
+    "uuid-v7>=1.0.0",
+]
 
 [tool.uv.workspace]
 members = ["packages/shared-models", "packages/shared-db", "rewindify-api"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.13",
+]
