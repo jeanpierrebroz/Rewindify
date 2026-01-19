@@ -1,20 +1,23 @@
-'''
-Sets up and fetches the clickhouse client.
-'''
-from clickhouse_connect.driver.client import Client
-import os
-from clickhouse_connect import get_client
+"""Sets up and fetches the clickhouse client."""
 
-CH_HOST = os.getenv("CH_HOST")
-CH_PORT = int(os.getenv('CH_PORT', 8123))
-CH_USER = os.getenv('CH_USER', '')
-CH_PASS = os.getenv('CH_PASSWORD', default='')
-CH_DB = os.getenv('CH_DB', '')
+import os
+
+from clickhouse_connect import get_client
+from clickhouse_connect.driver.client import Client
+from dotenv import dotenv_values
+
+config = dotenv_values()
+
+CH_HOST = config.get("CH_HOST", "localhost")
+CH_PORT = int(config.get("CH_PORT") or 8123)
+CH_USER = config.get("CLICKHOUSE_USER", "default")
+CH_PASS = config.get("CLICKHOUSE_PASSWORD", "")
+CH_DB = config.get("CLICKHOUSE_DB", "rewindify_dev_db")
 
 client: Client = get_client(
     host=CH_HOST,
     port=CH_PORT,
     username=CH_USER,
     password=CH_PASS,
-    database=CH_DB
+    database=CH_DB,
 )
