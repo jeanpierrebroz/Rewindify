@@ -5,7 +5,7 @@ services:
     environment:
       CLICKHOUSE_USER: ${CLICKHOUSE_USER:-default}
       CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
-      CLICKHOUSE_DB: rewindify-dev-db
+      CLICKHOUSE_DB: rewindify_dev_db
     ports:
       - "8123:8123" 
       - "9000:9000" 
