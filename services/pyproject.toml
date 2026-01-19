@@ -7,11 +7,19 @@ requires-python = ">=3.12"
 
 dependencies = [
     "pydantic>=2.12.5",
+    "python-dotenv>=1.2.1",
+    "stripe>=14.2.0",
+    "ty>=0.0.12",
     "uuid-v7>=1.0.0",
 ]
 
 [tool.uv.workspace]
-members = ["packages/shared-models", "packages/shared-db", "rewindify-api"]
+members = [
+    "packages/shared-models",
+ "packages/shared-db",
+ "rewindify-api",
+ "packages/billing",
+]
 
 [tool.ruff.lint]
 select = ["ALL"]

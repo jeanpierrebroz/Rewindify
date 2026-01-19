@@ -3,5 +3,6 @@
   "[python]": {
     "editor.autoClosingQuotes": "always",
     "editor.autoClosingBrackets": "always"
-  }
+  },
+  "editor.autoClosingQuotes": "always"
 }
