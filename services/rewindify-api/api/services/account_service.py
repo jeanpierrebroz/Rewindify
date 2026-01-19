@@ -1,6 +1,7 @@
 """Account management service for Rewindify."""
 
 from firebase_admin import auth
+from shared_db import client
 
 
 async def create_account(token: str):
@@ -8,4 +9,12 @@ async def create_account(token: str):
     uid: str = decoded_token["uid"]
     email: str = decoded_token.get("email")
 
-    
+    # try:
+    #     user = 
+    #     return user
+
+
+
+
+
+
