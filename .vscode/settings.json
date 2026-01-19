@@ -4,5 +4,6 @@
     "editor.autoClosingQuotes": "always",
     "editor.autoClosingBrackets": "always"
   },
-  "editor.autoClosingQuotes": "always"
+  "editor.autoClosingQuotes": "always",
+  "python.REPL.enableREPLSmartSend": false
 }
